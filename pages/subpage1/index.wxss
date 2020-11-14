@@ -1,1 +1,20 @@
 /* pages/subpage1/index.wxss */
+.imgView{
+  text-align: center;
+}
+image{
+  background-color: rgba(0,0,0,0.1);
+  width: 50vh;
+  margin: auto;
+}
+button{
+  margin-top: 40rpx;
+}
+
+.densityView{
+  text-align: center;
+  margin-top: 40rpx;
+}
+.densityText{
+  color: 	#00CED1;
+}

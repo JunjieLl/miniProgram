@@ -1,11 +1,68 @@
 // pages/subpage1/index.js
 Page({
+  takePhoto:function(){
+    wx.showActionSheet({
+      itemList: ['从手机相册选择', '拍照'],
+      success: function (res) {
+        console.log(res.tapIndex)
+        getCurrentPages()[0].selectPic(res.tapIndex)
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+  selectPic: function (tapIndex) {
+    var sourceTypes = ['album', 'camera']
+    var sourceType=[sourceTypes[tapIndex]]
+    wx.chooseImage({
+      count:1,
+      sizeType:['original','compressed'],
+      sourceType:sourceType,
+      success:function(res){
+        getCurrentPages()[0].setData({
+          imgSrc: res.tempFilePaths,
+          hasImg: true
+        })
+      },
+      fail:function(res){
+        console.log(res.errMsg)
+      }
+    })
 
+  },
+  measureDensity:function(){
+    if(!this.data.hasImg){
+      wx.showToast({
+        title: '请先选择一张图片',
+        icon: 'none',
+        duration: 1000
+      })
+    }
+    else{
+      wx.showLoading({
+        title: '测量中',
+      })
+
+      setTimeout(function () {
+        getCurrentPages()[0].setData({
+          densityDisplay: true,
+          density: 50
+        })
+        wx.hideLoading()
+      }, 1500)
+
+    }
+
+  },
   /**
    * Page initial data
    */
   data: {
-
+    imgSrc:"",
+    hasImg:false,
+    densityDisplay:false,
+    density:0
   },
 
   /**

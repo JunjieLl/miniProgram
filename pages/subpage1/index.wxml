@@ -1,2 +1,9 @@
 <!--pages/subpage1/index.wxml-->
-<text>pages/subpage1/index.wxml</text>
+<view class="imgView">
+<image mode="aspectFit" src="{{imgSrc}}"></image>
+</view>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<button type="primary" bindtap="measureDensity">测量浓度</button>
+<view class="densityView" wx:if="{{densityDisplay}}">
+  <text class="densityText">浓度大小：{{density}}%</text>
+</view>
