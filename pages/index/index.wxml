@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <button>
-    
-  </button>
+  <button class="jk" bindtap="tap1" type="primary">图片分析</button>
+  <button bindtap="tap2" type="primary">实时检测</button>
+  <button bindtap="tap3" type="primary">历史记录</button>
 </view>
