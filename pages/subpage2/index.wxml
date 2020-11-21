@@ -1,2 +1,6 @@
 <!--pages/subpage2/index.wxml-->
-<text>pages/subpage2/index.wxml</text>
+<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
+
+<view class="densityView">
+  <text class="densityText">当前浓度：{{density}}%</text>
+</view>

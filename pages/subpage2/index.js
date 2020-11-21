@@ -5,14 +5,14 @@ Page({
    * Page initial data
    */
   data: {
-
+    density: 0
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+  
   },
 
   /**
@@ -26,7 +26,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    setInterval(()=>{
+      
+    },1000)
   },
 
   /**

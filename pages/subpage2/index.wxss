@@ -1,1 +1,9 @@
 /* pages/subpage2/index.wxss */
+
+.densityView{
+  text-align: center;
+  margin-top: 40rpx;
+}
+.densityText{
+  color: 	#00CED1;
+}

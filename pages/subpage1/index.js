@@ -5,7 +5,7 @@ Page({
       itemList: ['从手机相册选择', '拍照'],
       success: function (res) {
         console.log(res.tapIndex)
-        getCurrentPages()[0].selectPic(res.tapIndex)
+        getCurrentPages()[getCurrentPages().length-1].selectPic(res.tapIndex)
       },
       fail: function (res) {
         console.log(res.errMsg)
@@ -20,7 +20,7 @@ Page({
       sizeType:['original','compressed'],
       sourceType:sourceType,
       success:function(res){
-        getCurrentPages()[0].setData({
+        getCurrentPages()[getCurrentPages().length - 1].setData({
           imgSrc: res.tempFilePaths,
           hasImg: true
         })
@@ -45,7 +45,7 @@ Page({
       })
 
       setTimeout(function () {
-        getCurrentPages()[0].setData({
+        getCurrentPages()[getCurrentPages().length - 1].setData({
           densityDisplay: true,
           density: 50
         })
