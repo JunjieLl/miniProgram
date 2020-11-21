@@ -27,7 +27,9 @@ Page({
    */
   onShow: function () {
     setInterval(()=>{
-      
+      this.setData({
+        density: Math.ceil(Math.random() * 100)
+      });
     },1000)
   },
 

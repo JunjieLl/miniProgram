@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/subpage2/index",
     "pages/subpage1/index",
     "pages/logs/logs",
-    "pages/subpage2/index",
     "pages/subpage3/index"
   ],
   "window":{
@@ -12,6 +12,29 @@
     "navigationBarTitleText": "荧光气体浓度测定",
     "navigationBarTextStyle":"black",
     "backgroundColor": "#00BFFF"
+  },
+  "tabBar": {
+    "color": "#00BFFF",
+    "selectedColor": "#00BFFF",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/subpage1/index",
+        "text": "图片分析"
+      },
+      {
+        "pagePath": "pages/subpage2/index",
+        "text": "实时监测"
+      },
+      {
+        "pagePath": "pages/subpage3/index",
+        "text": "历史记录"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
